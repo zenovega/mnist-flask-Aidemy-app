@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: mnist-flask-Ademy-app
+    env: python
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: gunicorn mnist:app
+    pythonVersion: 3.10
